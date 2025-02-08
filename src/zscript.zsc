@@ -35,6 +35,7 @@ version "2.5"
 #include "zscript/hacx/enemies/majong7.zsc"
 #include "zscript/hacx/enemies/genie.zsc"
 #include "zscript/hacx/enemies/mine.zsc"
+#include "zscript/hacx/enemies/lurk.zsc"
 
 #include "zscript/hacx/items/ammo.zsc"
 #include "zscript/hacx/items/health.zsc"
