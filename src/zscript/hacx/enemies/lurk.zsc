@@ -1,0 +1,101 @@
+/**
+ * HacX 2.0 - ZScript
+ *
+ * Enemy: Lurk
+ */
+
+class HacxLurk : actor 
+{
+	Default
+	{
+		Health 60;
+        Speed 10;
+        Radius 20;
+        Height 56;
+        Mass 50;
+        PainChance 75;
+        Damage 5;
+        // Seesound is omitted or commented out if not available
+        ActiveSound "lurk/active";
+        PainSound "lurk/pain";
+        DeathSound "lurk/death";
+        //Obituary "$OB_LURK"; // Uncomment if you have an obituary string defined
+        Monster;
+        +FloorClip;
+    }
+
+    States
+    {
+    Spawn:
+        LURK A 10 A_Look();
+        Loop;
+    See:
+        LURK A 2 A_Chase();
+        LURK A 2 A_Chase();
+        LURK B 2 A_Chase();
+        LURK B 2 A_Chase();
+        LURK C 2 A_Chase();
+        LURK C 2 A_Chase();
+        LURK D 2 A_Chase();
+        LURK D 2 A_Chase();
+        Loop;
+    Missile:
+        LURK E 5 A_FaceTarget();
+        LURK F 5 Bright A_SpawnProjectile("HacxLurkBall", 32, 0, Random(-1, 1));
+        LURK G 5 Bright A_FaceTarget();
+        LURK G 5 Bright;
+        Goto See;
+    Melee:
+        LURK H 6 A_FaceTarget();
+        LURK I 6 A_PlaySound("lurk/melee");
+        LURK J 6 A_CustomMeleeAttack(Random(5, 10));
+        Goto See;
+    Pain:
+        LURK K 3;
+        LURK K 3 A_Pain();
+        Goto See;
+    Death:
+        LURK L 10 A_Scream();
+        LURK M 5;
+        LURK N 5 A_NoBlocking();
+        LURK O 5;
+        LURK P -1;
+        Stop;
+    }
+}
+
+class HacxLurkBall : Actor
+{
+    Default
+    {
+        Speed 16;
+        Radius 13;
+        Height 4;
+        Damage 3;
+        +NoBlockMap;
+        +NoGravity;
+        +DropOff;
+        +Missile;
+        RenderStyle "add";
+        Alpha 0.5;
+        +ThruGhost;
+        +NoTeleport;
+        SeeSound "misc/projectilefire";
+        DeathSound "misc/projectilehit";
+    }
+
+    States
+    {
+    Spawn:
+        LRKB A 4 Bright;
+        LRKB B 4 Bright;
+        Loop;
+    Death:
+        LRKX A 5 Bright;
+        LRKX B 5 Bright;
+        LRKX C 5 Bright;
+        LRKX D 5 Bright;
+        LRKX E 5 Bright;
+        Stop;
+    }
+}
