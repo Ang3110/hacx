@@ -68,6 +68,15 @@ android/death1			dsanddt1
 android/death2			dsanddt2
 android/gib				dsandgib
 
+$random lurk/active		{ lurk/active1 lurk/active2 }
+lurk/active1    dslrkac1
+lurk/active2    dslrkac2
+lurk/melee      dsphgmel
+lurk/pain       dslrkpai
+$random lurk/death		{ lurk/death1 lurk/death2 }
+lurk/death1     dslrkdt1
+lurk/death2     dslrkdt2
+
 phage/sight			dsphgsit
 phage/active			dsphgact
 phage/attack			dsphgatk
