@@ -9,17 +9,26 @@ How to build locally
 
 ### Prerequisites
 
-Building the project is simple -- simply have GNU Make and the 'zip'
-utility installed (generally included in most Linux distros, and
-easy to install via package manager if not).
+You have two options for building this project:
 
-Windows versions of these tools are pretty easily found as well.
-Search "GnuWin32" or "Gnu on Windows" (GOW) if you haven't just yet.
+### Option 1: GNU Make
 
-### Build
-```
-make
-```
+Ensure you have **GNU Make** and the `zip` utility installed. These tools are usually included with most Linux distributions.  
+If you’re on Windows, you can download GNU Make from [GnuWin32 Make](http://gnuwin32.sourceforge.net/packages/make.htm).
+
+### Option 2: Python Build Script
+
+Alternatively, you can use the Python script. To do this, install Python from the official website:  
+[Python Downloads](https://www.python.org/downloads/)
+
+## Build Instructions
+### Using GNU Make:
+```bash
+make```
+
+### Using python:
+```bash
+python3 build.py```
 
 ### Run
 ```
