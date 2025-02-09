@@ -21,7 +21,6 @@ If you’re on Windows, you can download GNU Make from [GnuWin32 Make](http://gn
 Alternatively, you can use the Python script. To do this, install Python from the official website:  
 [Python Downloads](https://www.python.org/downloads/)
 
-## Build Instructions
 ### Using GNU Make:
 ```bash
 make
