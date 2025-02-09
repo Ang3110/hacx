@@ -24,11 +24,13 @@ Alternatively, you can use the Python script. To do this, install Python from th
 ## Build Instructions
 ### Using GNU Make:
 ```bash
-make```
+make
+```
 
 ### Using python:
 ```bash
-python3 build.py```
+python3 build.py
+```
 
 ### Run
 ```
