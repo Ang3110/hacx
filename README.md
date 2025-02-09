@@ -7,8 +7,6 @@ Official repo for the Hacx 2.0 project. http://www.drnostromo.com/hacx/
 How to build locally
 ---------------------------
 
-### Prerequisites
-
 You have two options for building this project:
 
 ### Option 1: GNU Make
